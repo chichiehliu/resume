@@ -1,0 +1,310 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/********************  header *********************/
+.bg-light {
+  background-image: linear-gradient(to top, #568ea6, #305f72);
+  box-shadow: 10px 10px 10px #0f0e30fa;
+}
+
+/* Step2.6:調整logo大小 */
+.nav__logo {
+  width: 35px;
+}
+
+/*  step2.7:調整icons顏色及間距  */
+.nav__icons a {
+  color: #f5f4fa;
+  margin: 5px;
+}
+.nav__icons a:hover {
+  color: #006b79;
+  margin: 5px;
+}
+/* step2.8:螢幕小於576px不顯示icons */
+.nav__icons {
+  display: none;
+}
+
+@media screen and (min-width: 576px) {
+  .nav__icons {
+    display: inline-block;
+  }
+}
+
+/*  step2.9:選單區塊置中 */
+.navbar__collapse {
+  justify-content: center;
+}
+
+/* 讓LOGO跟ICON的寬度一樣，這樣中間的NAVER BAR才會真的置中 */
+.navbar .navbar__brand {
+  width: 100px;
+  margin: 0;
+}
+
+.nav__icons {
+  width: 100px;
+  text-align: right;
+}
+
+.navbar-toggler {
+  background-color: rgb(255, 255, 255);
+  border-color: #006b79;
+}
+
+/* step2.10:漢堡下拉選單文字置中 */
+.navbar-nav li {
+  text-align: center;
+}
+.nav-link {
+  color: #f5f4fa !important;
+}
+/* .nav-link p{
+  color: #f5f4fa !important;
+} */
+.nav-item a:hover {
+  color: #333333 !important;
+}
+/********************  carousel *********************/
+
+/* step3.3:加入上方固定文字及樣式 */
+.carousel__info {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  z-index: 1;
+  /* 向X軸回去一半在向Y回去一半 */
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 3px 3px 3px #333333;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* step3-4: RWD文字大小調整 */
+@media screen and (min-width: 768px) {
+  .carousel__info {
+    /* left: 50%; */
+    /* top: 80%; */
+    /* z-index: 1; */
+    /* 向X軸回去一半在向Y回去一半 */
+    /* transform: translate(-50%, -50%); */
+    font-size: 40px;
+  }
+}
+
+/********************  introduction *********************/
+
+.row {
+  height: 100%;
+}
+
+/* step4-2: 調整圖片大小 */
+.intro__avatar__container {
+  width: 300px;
+}
+.intro__avatar {
+  /* width: 300px; */
+  width: 300px;
+  /* left: 50%; */
+  /* transform: translate(-50%, 0%); */
+  /* position: absolute; */
+}
+section h2 {
+  border-bottom: 6px solid #ff4b4b;
+  margin-top: 5px;
+}
+/* step4-4: 調整文字樣式 */
+.intro__title {
+  /* text-align: center; */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.intro__text {
+  color: #333333;
+  display: block;
+  margin-top: 20px;
+}
+.intro__text h3 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* text-align: center; */
+}
+
+.intro__text p {
+  font-size: 14px;
+  text-align: justify;
+  line-height: 24px;
+}
+
+/* step4-5: 調整按鈕樣式 */
+.intro__text button {
+  border-style: none;
+  border-radius: 5px;
+  background-image: linear-gradient(to bottom, #ffffff, #41ced3);
+  box-shadow: 3px 3px 3px #33333342;
+  position: absolute;
+  left: 60%;
+  /* transform: translate(40%, 30%); */
+}
+.intro__text button:hover {
+  transition: background-image 300ms, box-shadow 300ms, left 300ms;
+  background-image: linear-gradient(to bottom, #ffffff, #32a4a8);
+  box-shadow: 3px 3px 3px #333333;
+  left: 55%;
+}
+/********************  skill *********************/
+
+/* skill-2、skill-7*/
+.skill h2 {
+  /* text-align: center; */
+  padding: 20px 0px;
+}
+
+/* skill-2、skill-7*/
+.skill__content__item img {
+  width: 40px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 30px;
+}
+
+/* skill-3、skill-6、skill-9*/
+.skill__content__item {
+  /* border: 2px solid blue; */
+
+  margin-bottom: 20px;
+}
+
+/* skill-5、skill-6、skill-8*/
+.skill__content__item__container {
+  height: 100%;
+  /* border-bottom: 2px solid red; */
+  box-shadow: 0 2px 4px 0 rgb(0, 0, 0, 0.7);
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  transition: bottom 500ms, background-color 500ms;
+}
+
+/* skill-8*/
+.skill__content__item__container:hover {
+  position: relative;
+  bottom: 3px;
+  background: rgb(200, 200, 200);
+}
+
+/* skill-9 */
+@media screen and (min-width: 768px) {
+  .skill__content__item {
+    margin-bottom: 0px;
+  }
+}
+
+/********************  portfolio *********************/
+
+/* portfolio-2 */
+
+.portfolio h2 {
+  /* text-align: center; */
+  padding: 20px 0px;
+}
+
+/* portfolio-2 */
+.portfolio__items__container img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* portfolio-3、portfolio-7*/
+.portfolio__items__container {
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  /* top: 0; */
+  /* left: 0; */
+  /* width: 100%; */
+  /* height: 250px; */
+  /* background-color: rgb(0, 0, 0, 0.5); */
+  /* border-radius: 15px; */
+}
+
+/* portfolio-3、portfolio-4、portfolio-5、portfolio-6*/
+.portfolio__items__container__cover {
+  position: absolute;
+  top: 0%;
+  left: 0;
+
+  width: 100%;
+  height: 250px;
+
+  width: calc(100% - 30px);
+  /* calc減號左右要有空格 */
+  left: 15px;
+  border-radius: 15px;
+  background-color: rgb(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  color: white;
+  overflow: hidden;
+
+  transition: top 500ms;
+  top: 100%;
+}
+
+/* portfolio-6 */
+.portfolio__items__container:hover .portfolio__items__container__cover {
+  top: 0;
+}
+.portfolio__items__container__cover span {
+  position: absolute;
+  top: 50%;
+}
+.portfolio__lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: none;
+}
+.portfolio__lightbox img {
+  width: 70vw;
+  max-height: 100vh;
+  object-fit: contain;
+}
+.portfolio__lightbox__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  /* 這邊PADDING可以讓XX範圍選取變大 */
+  padding: 15px 20px;
+  cursor: pointer;
+}
+
+/*footer-3*/
+footer {
+  background-color: #f9f9fb;
+  padding: 30px 0;
+  text-align: center;
+}
+footer a {
+  text-align: center;
+}

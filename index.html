@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <!-- step1.2引入bootstrap的CSS部分 -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- step1.3引入FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-12/css/all.css">
+  <!-- 將個人CSS放下BS與FA的CSS下方，這樣自己寫的CSS才能覆蓋掉上方的設定 -->
+  <link rel="stylesheet" href="index.css" />
+  <title>Joy履歷</title>
+</head>
+
+<body>
+  <!-- 頁首 -->
+  <header class=" bg-light">
+    <!-- bs預設有留白的container -->
+    <div class="container">
+      <nav class="navbar navbar-expand-sm navbar-light">
+        <a class="navbar-brand navbar__brand " href="#"><img class=" nav__logo" src="./images/egg.svg" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse navbar__collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#intro">
+                <p>關於我</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skill">
+                <p>技能</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">
+                <p>作品集</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__icons">
+          <a href="#"><i class="fas fa-horse"></i></a>
+          <a href="#"><i class="fas fa-kiwi-bird"></i></a>
+          <a href="#"><i class="fas fa-dragon"></i></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- 頁中 -->
+  <main>
+    <!-- 輪播 -->
+    <section id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
+      <div>
+        <p class="carousel__info">Hello, I am Joy</p>
+      </div>
+
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/banner_1.jpg" class="d-block w-100" alt="pic1">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/banner_2.jpg" class="d-block w-100" alt="pic2">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/banner_3.jpg" class="d-block w-100" alt="pic3">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </section>
+    <!-- 個人檔案 -->
+
+    <section id="intro" class="container intro">
+      <h2 class="intro__title ">About me</h2>
+      <div class="row">
+
+        <div class="intro__avatar__container col-12 col-md-6">
+          <img class="intro__avatar" src="./images/EGGA.jpg" alt="avatar">
+        </div>
+        <div class="col-12 col-md-6 intro__text">
+          <h3>Hello, I am Joy</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique repudiandae suscipit hic pariatur
+            dicta,
+            officia ullam. Harum officiis, similique placeat, magnam, veniam saepe distinctio omnis aliquam quo eligendi
+            soluta hic!</p>
+          <button>Download CV</button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- skill加上容器版本 -->
+
+    <!-- ********* skill *********-->
+    <section class="skill container" id="skill">
+      <h2>Skill</h2>
+      <div class="skill__content row">
+        <div class="skill__content__item col-12 col-md-4">
+          <div class="skill__content__item__container">
+            <img src="images/skill-photoshop.png" alt="photoshop">
+            <h4>Photoshop</h4>
+            <div class="skill__content__item__intro">繪製圖片及平面廣告設計</div>
+          </div>
+        </div>
+        <div class="skill__content__item col-12 col-md-4">
+          <div class="skill__content__item__container">
+            <img src="images/skill-exhibition.png" alt="exhibition">
+            <h4>Exhibition</h4>
+            <div class="skill__content__item__intro">繪製圖片及平面廣告設計</div>
+          </div>
+        </div>
+        <div class="skill__content__item col-12 col-md-4">
+          <div class="skill__content__item__container">
+            <img src="images/skill-illustrator.png" alt="illustrator">
+            <h4>Illustrator</h4>
+            <div class="skill__content__item__intro">繪製圖片及平面廣告設計繪製圖片及平面廣告設計</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- portfolio 加上 lightbox -->
+    <!-- ********* portfolio *********-->
+
+    <section class="portfolio container" id="portfolio">
+      <h2>Portfolio</h2>
+      <div class="portfolio__items row">
+        <div class="portfolio__items__container col-12 col-md-6 col-lg-3">
+          <img src="images/portfolio-one.jpg" alt="portfolio">
+          <div class="portfolio__items__container__cover">
+            <span>作品名稱</span>
+          </div>
+        </div>
+        <div class="portfolio__items__container col-12 col-md-6 col-lg-3">
+          <img src="images/portfolio-two.jpg" alt="portfolio">
+          <div class="portfolio__items__container__cover">
+            <span>作品名稱</span>
+          </div>
+        </div>
+        <div class="portfolio__items__container col-12 col-md-6 col-lg-3">
+          <img src="images/portfolio-three.jpg" alt="portfolio">
+          <div class="portfolio__items__container__cover">
+            <span>作品名稱</span>
+          </div>
+        </div>
+        <div class="portfolio__items__container col-12 col-md-6 col-lg-3">
+          <img src="images/portfolio-two.jpg" alt="portfolio">
+          <div class="portfolio__items__container__cover">
+            <span>作品名稱</span>
+          </div>
+        </div>
+        <div class="portfolio__items__container col-12 col-md-6 col-lg-3">
+          <img src="images/portfolio-one.jpg" alt="portfolio">
+          <div class="portfolio__items__container__cover">
+            <span>作品名稱</span>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio__lightbox">
+        <i class="fas fa-times portfolio__lightbox__close"></i>
+        <img src="images/portfolio-one.jpg" alt="portfolio">
+      </div>
+    </section>
+
+
+  </main>
+  <!-- 頁尾 -->
+  <!-- footer -->
+
+  <footer class="container-fluid">
+    <span>Copyright &copy; 2019</span>
+    <a href="#"><i class="fab fa-facebook-square fa-lg"></i></a>
+    <a href="#"><i class="fab fa-linkedin fa-lg"></i></a>
+    <a href="#"><i class="fab fa-github-square fa-lg"></i></a>
+  </footer>
+  </section>
+  <section id="portfolio"></section>
+  <!-- step1.2引入bootstrap的JS部分 -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="./lightbox.js"></script>
+</body>
+
+</html>
